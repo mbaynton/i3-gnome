@@ -1,7 +1,9 @@
 #!/bin/sh
 
 if [ -z $XDG_CURRENT_DESKTOP ]; then
-    export XDG_CURRENT_DESKTOP="GNOME-Flashback:GNOME"
+    export XDG_CURRENT_DESKTOP="ubuntu:GNOME-Flashback:GNOME"
 fi
 
-exec gnome-session --builtin --session=i3-gnome --disable-acceleration-check "$@"
+export GNOME_SHELL_SESSION_MODE=ubuntu
+
+exec gnome-session --session=i3-gnome "$@"

@@ -18,6 +18,7 @@ install:
 	$(INSTALL) -m0644 -D files/i3-gnome.session $(PATH_I3_GNOME_SESSION)
 	$(INSTALL) -m0755 -D files/i3-gnome $(PATH_I3_GNOME)
 	$(INSTALL) -m0755 -D files/i3-gnome-session $(PATH_GNOME_SESSION_I3)
+	scripts/build-i3-gnome-systemd-dropin.sh
 
 
 uninstall:
@@ -26,6 +27,7 @@ uninstall:
 	rm -f $(PATH_I3_GNOME_SESSION)
 	rm -f $(PATH_I3_GNOME_XSESSION)
 	rm -f $(PATH_GNOME_SESSION_I3)
+	rm -rf /usr/lib/systemd/user/gnome-session@i3-gnome.target.d
 
 
 .PHONY: all install uninstall

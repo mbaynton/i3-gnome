@@ -1,8 +1,12 @@
 # i3-gnome
 
-A collection of gnome-session and xsession files required to make the i3 tiling window manager work with GNOME Flashback. The upshot of which is that you can use i3 within a GNOME 3 session (via GDM), and make use of gnome-flashback utility functions.
+A collection of gnome-session and xsession files required to make the i3 tiling window manager work with GNOME desktop environment services.
+The upshot of which is that you can use i3 within a GNOME 3 session (via GDM), and make use of things like 
+ * `gnome-control-center` to change system settings (wifi, bluetooth, displays, sound, power, etc.)
+ * Media keys
 
-These files are updated to work with the most recent Ubuntu release (currently **20.04**).
+These files are updated to work with the most recent Ubuntu LTS release (currently **24.04**). The archived original project, 
+[https://github.com/i3-gnome/i3-gnome](https://github.com/i3-gnome/i3-gnome), has worked at least for some through 22.04.
 
 ## Requirements
 
@@ -11,7 +15,7 @@ You should have the following installed:
 * make (or build-essential)
 * <a href="https://i3wm.org/">i3wm</a>, or <a href="https://github.com/Airblader/i3">i3-gaps</a>
 * GNOME 3
-* GNOME Flashback
+* GNOME Flashback, installed from Universe via `apt` for systemd integration
 
 ## Installation
 
